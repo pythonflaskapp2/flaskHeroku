@@ -9,8 +9,8 @@ from validation.Validataor import *
 app=Flask(__name__) 
 
 @app.route('/users',methods = ["GET"])
-@login_required
-@admin_required
+#@login_required
+#@admin_required
 def getUsers():
     print(g.role)
     if (g.role == 'admin') :
@@ -28,8 +28,8 @@ def getUsers():
         return jsonify(output),403
  
 @app.route('/users/<int:userid>',methods = ["GET"])
-@login_required
-@require_isAdminOrSelf
+#@login_required
+#@require_isAdminOrSelf
 def getOneUser(userid):
     print (g.role)
     if (g.role == 'admin') or (g.userid == userid):
