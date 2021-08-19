@@ -1,3 +1,4 @@
+import os
 class Settings:
     secretKey = "321897kdbmgj321djnbug#@4rhxcjk6(!d)"
     host = os.environ['HOST']
